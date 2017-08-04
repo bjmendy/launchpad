@@ -1,0 +1,19 @@
+{
+  "name": "launchpad",
+  "version": "1.0.0",
+  "description": "Coding challenge for Launchpad Lab made in vanilla js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjmendy/launchpad.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjmendy/launchpad/issues"
+  },
+  "homepage": "https://github.com/bjmendy/launchpad#readme"
+}

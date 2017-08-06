@@ -1,9 +1,9 @@
 //setting up the API call
 var req = new XMLHttpRequest();
-req.open("POST", "https://api.github.com", true);
+req.open("GET", "https://api.github.com", true);
 req.onreadystatechange = function () {
   if (req.readyState != 4 || req.status != 200) return;
-  alert("Success: " + req.responseText);
+  alert("Success!");
 };
 req.send("its workinnnnnggggg");
 
@@ -15,7 +15,7 @@ var heading = document.createElement("h1");
 heading.setAttribute("id", "Forks");
 
 $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=052f26926ae9784c2d677ca7bc5dec98',
+  url: 'http://api.github.com/repos/octocat/Hello-World/forks',
   type: "GET",
   dataType: 'json',
   success: function(data) {
@@ -30,7 +30,7 @@ var heading2 = document.createElement("h1");
 heading2.setAttribute("id", "Commits");
 
 $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=052f26926ae9784c2d677ca7bc5dec98',
+  url: 'http://api.github.com/repos/octocat/Hello-World/commits',
   type: "GET",
   dataType: 'json',
   success: function(data) {
@@ -45,7 +45,7 @@ var heading3 = document.createElement("h1");
 heading3.setAttribute("id", "Pull Requests");
 
 $.ajax({
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=052f26926ae9784c2d677ca7bc5dec98',
+  url: 'http://api.github.com/repos/octocat/Hello-World/pulls',
   type: "GET",
   dataType: 'json',
   success: function(data) {
@@ -55,3 +55,5 @@ $.ajax({
 	console.log(error)
   }
 });
+
+// set up a for loop to loop through the calls

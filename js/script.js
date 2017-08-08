@@ -7,25 +7,36 @@ req.onreadystatechange = function () {
 };
 req.send("its workinnnnnggggg");
 
-//REACT SECTION
+var body = document.getElementsByTagName ('body');
+var angularHeader = document.createElement("h1");
+var emberHeader = document.createElement("h1");
+var vueHeader = document.createElement("h1");
 var heading = document.createElement("h1");
-heading.setAttribute("id", "Forks");
 
-response1 = new Response();
+//REACT SECTION
+var reactHeader = document.createElement("h1");
+reactHeader.innerHTML = "React";
+body.appendChild(reactHeader);
+
+
+// response1 = new Response();
+// Promise<Response> fetch("http://api.github.com/repos/facebook/react/forks"[, GET]);
 
 $.ajax({
   url: 'http://api.github.com/repos/facebook/react/forks',
   type: "GET",
   dataType: 'json',
   success: function(data) {
-    console.log(response1.forksCount)
-      var forksCount = "The number of forks for this repo is " + response1.forks_count;
+    var reactForksCount = "The number of forks for this repo is " + response1.forks_count;
+      console.log(response1.reactForksCount)
         console.log(response1);
 
-var body = document.getElementsByTagName ('body')[0];
-var div = document.createElement('div');
-  div.innerHTML = forksCount;
-  body.appendChild(div);
+var reactForks = document.createElement("h2");
+  reactForks.setAttribute("id", "reactforks");
+  reactForks.innerHTML = reactForksCount;
+  body.appendChild(reactForks);
+
+// var body = document.getElementsByTagName ('body');
 
 // if (forksCount.Name === 2012){
 // body.appendChild(hungerGames);
@@ -52,6 +63,10 @@ var div = document.createElement('div');
 // 	console.log(error)
 //   }
 // });
+var reactCommits = document.createElement("h2");
+  reactCommits.setAttribute("id", "reactcommits");
+  reactCommits.innerHTML = reactCommitsCount;
+  body.appendChild(reactCommits);
 
 
 // var heading3 = document.createElement("h1");
@@ -68,8 +83,15 @@ var div = document.createElement('div');
 // 	console.log(error)
 //   }
 // });
+var reactPulls = document.createElement("h2");
+  reactPulls.setAttribute("id", "reactpulls");
+  reactPulls.innerHTML = reactPullsCount;
+  body.appendChild(reactPulls);
 
 // //ANGULAR SECTION
+var angularHeader = document.createElement("h1");
+angularHeader.innerHTML = "Angular";
+body.appendChild(angularHeader);
 // var heading = document.createElement("h1");
 // heading.setAttribute("id", "Forks");
 
@@ -92,6 +114,11 @@ var div = document.createElement('div');
 // div.appendChild(p);
 // p.innerHTML = hungerGames;
 // p.style.color = 'red';
+
+var angularForks = document.createElement("h2");
+  angularForks.setAttribute("id", "angularforks");
+  angularForks.innerHTML = angularForksCount;
+  body.appendChild(angularForks);
 
 // if (hungerGames.Year === 2012){
 // body.appendChild(hungerGames);
@@ -118,7 +145,10 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
-
+var angularCommits = document.createElement("h2");
+  angularCommits.setAttribute("id", "angularcommits");
+  angularCommits.innerHTML = angularCommitsCount;
+  body.appendChild(angularCommits);
 
 // var heading3 = document.createElement("h1");
 // heading3.setAttribute("id", "Pull Requests");
@@ -134,10 +164,15 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
+var angularPulls = document.createElement("h2");
+  angularPulls.setAttribute("id", "angularpulls");
+  angularPulls.innerHTML = angularPullsCount;
+  body.appendChild(angularPulls);
 
 // //EMBER SECTION
-// var heading = document.createElement("h1");
-// heading.setAttribute("id", "Forks");
+var emberHeader = document.createElement("h1");
+emberHeader.innerHTML = "Ember";
+body.appendChild(emberHeader);
 
 // response3 = new Response();
 
@@ -168,7 +203,10 @@ var div = document.createElement('div');
 //     console.log("error");
 //   }
 // });
-
+var emberForks = document.createElement("h2");
+  emberForks.setAttribute("id", "emberforks");
+  emberForks.innerHTML = emberForksCount;
+  body.appendChild(emberForks);
 
 // var heading2 = document.createElement("h1");
 // heading2.setAttribute("id", "Commits");
@@ -184,7 +222,10 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
-
+var emberCommits = document.createElement("h2");
+  emberCommits.setAttribute("id", "embercommits");
+  emberCommits.innerHTML = emberCommitsCount;
+  body.appendChild(emberCommits);
 
 // var heading3 = document.createElement("h1");
 // heading3.setAttribute("id", "Pull Requests");
@@ -200,10 +241,15 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
+var emberPulls = document.createElement("h2");
+  emberPulls.setAttribute("id", "emberpulls");
+  emberPulls.innerHTML = emberPullsCount;
+  body.appendChild(emberPulls);
 
 // //VUE SECTION
-// var heading = document.createElement("h1");
-// heading.setAttribute("id", "Forks");
+var vueHeader = document.createElement("h1");
+vueHeader.innerHTML = "Vue";
+body.appendChild(vueHeader);
 
 // response4 = new Response();
 
@@ -234,7 +280,10 @@ var div = document.createElement('div');
 //     console.log("error");
 //   }
 // });
-
+var vueForks = document.createElement("h2");
+  vueForks.setAttribute("id", "vueforks");
+  vueForks.innerHTML = vueForksCount;
+  body.appendChild(vueForks);
 
 // var heading2 = document.createElement("h1");
 // heading2.setAttribute("id", "Commits");
@@ -250,7 +299,10 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
-
+var vueCommits = document.createElement("h2");
+  vueCommits.setAttribute("id", "vuecommits");
+  vueCommits.innerHTML = vueCommitsCount;
+  body.appendChild(vueCommits);
 
 // var heading3 = document.createElement("h1");
 // heading3.setAttribute("id", "Pull Requests");
@@ -266,3 +318,7 @@ var div = document.createElement('div');
 //   console.log(error)
 //   }
 // });
+var vuePulls = document.createElement("h2");
+  vuePulls.setAttribute("id", "vuepulls");
+  vuePulls.innerHTML = vuePullsCount;
+  body.appendChild(vuePulls);

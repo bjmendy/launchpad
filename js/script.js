@@ -7,12 +7,20 @@ var angularHeader = document.createElement("h1");
 var emberHeader = document.createElement("h1");
 var vueHeader = document.createElement("h1");
 var heading = document.createElement("h1");
+var div = document.createElement("div");
+var elem = document.createElement("img");
+var elem2 = document.createElement("img");
+var elem3 = document.createElement("img");
+var elem4 = document.createElement("img");
 
 //REACT SECTION
 var reactSection = document.createElement("div")
 var reactHeader = document.createElement("h1");
 reactHeader.innerHTML = "React";
 reactSection.appendChild(reactHeader);
+
+elem.setAttribute("src", "css/images/react-logo-300x289.jpg");
+reactSection.appendChild(elem);
 
 $.ajax({
   url: 'http://api.github.com/repos/facebook/react/forks',
@@ -81,6 +89,9 @@ var angularSection = document.createElement("div");
 var angularHeader = document.createElement("h1");
 angularHeader.innerHTML = "Angular";
 angularSection.appendChild(angularHeader)
+
+elem2.setAttribute("src", "css/images/angular-card.jpg");
+angularSection.appendChild(elem2);
 
 
 $.ajax({
@@ -151,6 +162,9 @@ var emberHeader = document.createElement("h1");
 emberHeader.innerHTML = "Ember";
 emberSection.appendChild(emberHeader);
 
+elem3.setAttribute("src", "css/images/Ember.js_Logo_and_Mascot.jpg");
+emberSection.appendChild(elem3);
+
 
 $.ajax({
   url: 'http://api.github.com/repos/emberjs/ember.js/forks',
@@ -219,6 +233,9 @@ var vueSection = document.createElement("div");
 var vueHeader = document.createElement("h1");
 vueHeader.innerHTML = "Vue";
 vueSection.appendChild(vueHeader);
+
+elem4.setAttribute("src", "css/images/vuelogo.jpg");
+vueSection.appendChild(elem4);
 
 $.ajax({
   url: 'http://api.github.com/repos/vuejs/vue/forks',
